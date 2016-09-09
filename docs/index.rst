@@ -6,12 +6,12 @@
 Welcome to vcgif's documentation!
 =================================
 
-Contents:
-
 .. toctree::
+   :numbered:
    :maxdepth: 2
+   :caption: User Documentation
 
-
+   Get Started <getting_started>
 
 Indices and tables
 ==================
