@@ -5,7 +5,29 @@ This module contains `main` method plus related subroutines.
 parsing options and commands
 """
 
+import argparse
+
+from vcgif.GifBootstrap import GifBootstrap
 
 def main():
-    print('there')
+    try:
+        parser = argparse.ArgumentParser(description='Gif generate from video or picture.')
+
+        parser.add_argument(
+            '-v', '--video',
+            help='Convert video entity path',
+        )
+
+        parser.add_argument(
+            '-p', '--picture',
+            help='Convert picture entity path',
+            nargs='+'
+        )
+
+        args = parser.parse_args()
+    except Exception as e:
+        parser.print_help()
+
+    # bootstrap 
+    GifBootstrap(args)
 
