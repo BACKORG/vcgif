@@ -9,4 +9,9 @@ Github: https://github.com/zhexiao/vcgif
 """
 
 class Video:
-    pass    
+    def __init__(self, args):
+        self.args = args
+        self.load()
+
+    def load(self):
+        pass
