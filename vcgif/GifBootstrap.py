@@ -19,4 +19,26 @@ class GifBootstrap(GifAbstract):
 
     def dispatch(self):
         if self.args.video is not None:
-            Video(self.args)
+            media = Video(self.args.video)
+
+            if self.args.start is not None:
+                media.start_timestamp = self.args.start
+
+            if self.args.duration is not None:
+                media.gif_duration = self.args.duration
+
+            if self.args.fps is not None:
+                media.fps = self.args.fps
+
+            if self.args.quality is not None:
+                media.quality = self.args.quality
+
+            if self.args.destination is not None:
+                media.destination = self.args.destination
+
+            if self.args.name is not None:
+                media.name = self.args.name 
+
+        
+
+            media.convert_gif()
