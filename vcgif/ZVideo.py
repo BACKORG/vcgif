@@ -82,15 +82,15 @@ class ZVideo(GifAbstract):
     def generate_high_quality_gif(self):
         """ generate high quality gif """
         palette="/tmp/{0}.png".format( str(uuid.uuid4()) )
-        palette_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -vf "fps=12,scale=320:-1:flags=lanczos,palettegen" -y {3}'.format(self._start_timestamp, self._gif_duration, self._video, palette)
+        palette_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -vf "fps={3},scale=320:-1:flags=lanczos,palettegen" -y {4}'.format(self._start_timestamp, self._gif_duration, self._video, self._fps, palette)
 
         subprocess.call(palette_command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)
 
-        gif_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -i {3} -lavfi "fps=12,scale=320:-1:flags=lanczos [x]; [x][1:v] paletteuse" -y {4}'.format(self._start_timestamp, self._gif_duration, self._video, palette, self.gif_path)
+        gif_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -i {3} -lavfi "fps={4},scale=320:-1:flags=lanczos [x]; [x][1:v] paletteuse" -y {5}'.format(self._start_timestamp, self._gif_duration, self._video, palette, self._fps, self.gif_path)
         subprocess.call(gif_command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)
 
     def generate_low_quality_gif(self):
         """ generate low quality gif """
-        command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -r 12 -vf scale=320:-1 -gifflags +transdiff -y {3} 2>&1'.format(self._start_timestamp, self._gif_duration, self._video, self.gif_path)
+        command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -r {3} -vf scale=320:-1 -gifflags +transdiff -y {4} 2>&1'.format(self._start_timestamp, self._gif_duration, self._video, self._fps, self.gif_path)
 
         subprocess.call(command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)

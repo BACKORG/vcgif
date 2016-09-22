@@ -19,10 +19,6 @@ class GifBootstrap:
 
     def dispatch(self):
         self.instance.generate_gif()
-        print(self.instance.video)
-        print(self.instance.start_timestamp)
-        print(self.instance.gif_duration)
+      
         print(self.instance.fps)
-        print(self.instance.quality)
-        print(self.instance.destination)
-        print(self.instance.name)
+       
