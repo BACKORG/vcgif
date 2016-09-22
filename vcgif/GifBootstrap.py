@@ -8,37 +8,21 @@ Contact: zhexiao27@gmail.com
 Github: https://github.com/zhexiao/vcgif
 """
 
-from vcgif.GifAbstract import GifAbstract
-from vcgif.Video import Video
+from vcgif.GifFactory import GifFactory
 
-class GifBootstrap(GifAbstract):
+class GifBootstrap:
     
     def __init__(self, args):
         self.args = args
+        self.instance = GifFactory.factory(self.args)
         self.dispatch()
 
     def dispatch(self):
-        if self.args.video is not None:
-            media = Video(self.args.video)
-
-            if self.args.start is not None:
-                media.start_timestamp = self.args.start
-
-            if self.args.duration is not None:
-                media.gif_duration = self.args.duration
-
-            if self.args.fps is not None:
-                media.fps = self.args.fps
-
-            if self.args.quality is not None:
-                media.quality = self.args.quality
-
-            if self.args.destination is not None:
-                media.destination = self.args.destination
-
-            if self.args.name is not None:
-                media.name = self.args.name 
-
-        
-
-            media.convert_gif()
+        self.instance.generate_gif()
+        print(self.instance.video)
+        print(self.instance.start_timestamp)
+        print(self.instance.gif_duration)
+        print(self.instance.fps)
+        print(self.instance.quality)
+        print(self.instance.destination)
+        print(self.instance.name)

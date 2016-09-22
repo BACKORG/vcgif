@@ -22,11 +22,11 @@ def main():
             nargs='+'
         )
         parser.add_argument(
-            '-s', '--start',
+            '-st', '--start-timestamp',
             help='The start second of video file',
         )
         parser.add_argument(
-            '-d', '--duration',
+            '-gd', '--gif-duration',
             help='The duration of output gif',
         )
         parser.add_argument(
@@ -51,5 +51,5 @@ def main():
         parser.print_help()
 
     # bootstrap 
-    GifBootstrap(args)
+    GifBootstrap(vars(args))
 

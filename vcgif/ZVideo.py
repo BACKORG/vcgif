@@ -13,77 +13,33 @@ import re
 import uuid
 import os
 
-class Video:
-    def __init__(self, video, **kwargs):
+from vcgif.GifAbstract import GifAbstract
+
+class ZVideo(GifAbstract):
+    def __init__(self, **kwargs):
+        super(ZVideo, self).__init__()
+
+        """ video url """
+        self._video = kwargs.pop('video') or self._video
+
         """ set start timestamp """
-        self._start_timestamp = kwargs.pop('start_timestamp', 0)
+        self._start_timestamp = kwargs.pop('start_timestamp') or self._start_timestamp
 
         """ set gif duration """
-        self._gif_duration = kwargs.pop('gif_duration', 10)
+        self._gif_duration = kwargs.pop('gif_duration') or self._gif_duration
 
         """ set gif frames per second """
-        self._fps = kwargs.pop('fps', 12)
+        self._fps = kwargs.pop('fps') or self._fps
 
         """ set gif convert quality """
-        self._quality = kwargs.pop('quality', 'low')
+        self._quality = kwargs.pop('quality') or self._quality
 
         """ set target gif destination """
-        self._destination = kwargs.pop('destination', '.')
+        self._destination = kwargs.pop('destination') or self._destination
 
         """ set gif name """
-        self._gif_name = kwargs.pop('name', str(uuid.uuid4()))
-
-        """ video property """
-        self.video = video
-
-    @property
-    def start_timestamp(self):
-        return self._start_timestamp
-
-    @start_timestamp.setter
-    def start_timestamp(self, val):
-        self._start_timestamp = val
-
-    @property
-    def gif_duration(self):
-        return self._gif_duration
-
-    @gif_duration.setter
-    def gif_duration(self, val):
-        self._gif_duration = val
-
-    @property
-    def fps(self):
-        return self._fps
-
-    @fps.setter
-    def fps(self, val):
-        self._fps = val
-
-    @property
-    def quality(self):
-        return self._quality
-
-    @quality.setter
-    def quality(self, val):
-        self._quality = val
-
-    @property
-    def destination(self):
-        return self._destination
-
-    @destination.setter
-    def destination(self, val):
-        self._destination = val
-
-    @property
-    def name(self):
-        return self._gif_name
-
-    @name.setter
-    def name(self, val):
-        self._gif_name = val
-
+        self._gif_name = kwargs.pop('name') or self._gif_name
+ 
     def analysis(self):
         """ analysis video """
         try:
@@ -112,7 +68,7 @@ class Video:
         except Exception as e:
             print(e)
 
-    def convert_gif(self):
+    def generate_gif(self):
         """ convert dispatch """
         
         # gif path
@@ -126,15 +82,15 @@ class Video:
     def generate_high_quality_gif(self):
         """ generate high quality gif """
         palette="/tmp/{0}.png".format( str(uuid.uuid4()) )
-        palette_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -vf "fps=12,scale=320:-1:flags=lanczos,palettegen" -y {3}'.format(self.start_timestamps, self.gif_duration, self.video_fullpath, palette)
+        palette_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -vf "fps=12,scale=320:-1:flags=lanczos,palettegen" -y {3}'.format(self._start_timestamp, self._gif_duration, self._video, palette)
 
         subprocess.call(palette_command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)
 
-        gif_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -i {3} -lavfi "fps=12,scale=320:-1:flags=lanczos [x]; [x][1:v] paletteuse" -y {4}'.format(self.start_timestamps, self.gif_duration, self.video_fullpath, palette, self.gif_fullpath)
+        gif_command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -i {3} -lavfi "fps=12,scale=320:-1:flags=lanczos [x]; [x][1:v] paletteuse" -y {4}'.format(self._start_timestamp, self._gif_duration, self._video, palette, self.gif_path)
         subprocess.call(gif_command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)
 
     def generate_low_quality_gif(self):
         """ generate low quality gif """
-        command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -r 12 -vf scale=320:-1 -gifflags +transdiff -y {3} 2>&1'.format(self._start_timestamp, self._gif_duration, self.video, self.gif_path)
+        command = 'ffmpeg -v warning -ss {0} -t {1} -i {2} -r 12 -vf scale=320:-1 -gifflags +transdiff -y {3} 2>&1'.format(self._start_timestamp, self._gif_duration, self._video, self.gif_path)
 
         subprocess.call(command, shell=True,  stdout=open(os.devnull, "w"), stderr=subprocess.STDOUT)
