@@ -15,7 +15,7 @@ Python3 and pip3 are required for install vcgif:
    # install python3 and pip3
    $ sudo apt-get install python3 python3-pip
 
-Ffmpeg is required for process video:
+FFmpeg is required for process video:
 
 .. code-block:: bash
     
@@ -25,8 +25,16 @@ Ffmpeg is required for process video:
 
 Install
 ---------------
-After you install pip3, you can install vcgif directly from PyPI.
+After you match the requirements, you can install vcgif directly from PyPI.
 
 .. code-block:: bash
 
    $ sudo pip3 install vcgif
+
+Test
+----------
+Open your command and running the following code, you will see a list of helps from vcgif.
+
+.. code-block:: bash
+    
+    $ vcgif -h
