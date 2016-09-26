@@ -20,5 +20,5 @@ class GifBootstrap:
     def dispatch(self):
         # self.instance.generate_gif()
         self.instance.analysis()
-        print(self.instance.video_info)
+        # print(self.instance.video_info)
        
