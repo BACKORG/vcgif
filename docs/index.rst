@@ -12,6 +12,7 @@ Welcome to vcgif's documentation!
    :caption: User Documentation
 
    Get Started <getting_started>
+   Usage
 
 Indices and tables
 ==================

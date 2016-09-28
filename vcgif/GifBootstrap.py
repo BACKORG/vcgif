@@ -21,4 +21,3 @@ class GifBootstrap:
         # self.instance.generate_gif()
         self.instance.analysis()
         # print(self.instance.video_info)
-       
