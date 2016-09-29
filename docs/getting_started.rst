@@ -42,8 +42,8 @@ There is a simple example for vcgif.
 .. note:: ``-v`` option is indicate your video path, ``-dest`` option is indicate the path where you want to put the gif, ``-n`` option is your gif file name.
 
 
-Test
-----
+Options
+-------
 Open your command and running the following code, you will see a list of helps from vcgif.
 
 .. code-block:: bash
