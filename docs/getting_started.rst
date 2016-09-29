@@ -36,6 +36,7 @@ Usage
 There is a simple example for vcgif.
 
 .. code-block:: bash
+
    $ vcgif -v /vagrant/SampleVideo_1280x720_2mb.mp4 -dest . -n test
 
 .. note:: ``-v`` option is indicate your video path, ``-dest`` option is indicate the path where you want to put the gif, ``-n`` option is your gif file name.
