@@ -4,9 +4,8 @@ Abstract class for all gif
 """
 
 # internal libs
-import os
 import uuid
-from abc import ABCMeta, abstractmethod, abstractproperty
+from abc import ABCMeta, abstractmethod
 
 class GifAbstract(metaclass=ABCMeta):
     def __init__(self):
@@ -76,5 +75,5 @@ class GifAbstract(metaclass=ABCMeta):
 
     @abstractmethod
     def generate_gif(self):
-       """ All subclass need implement this function """
-       pass
+        """ All subclass need implement this function """
+        pass

@@ -3,7 +3,7 @@ Getting Started
 This document will show you how to get up and running with vcgif.
 
 Requirement
----------------
+-----------
 
 Python3 and pip3 are required for install vcgif.
 
@@ -24,15 +24,25 @@ FFmpeg is required for process video.
     $ sudo apt-get install ffmpeg
 
 Install
----------------
+-------
 After you match the requirements, you can install vcgif directly from PyPI.
 
 .. code-block:: bash
 
    $ sudo pip3 install vcgif
 
+Usage
+-----
+There is a simple example for vcgif.
+
+.. code-block:: bash
+   $ vcgif -v /vagrant/SampleVideo_1280x720_2mb.mp4 -dest . -n test
+
+.. note:: ``-v`` option is indicate your video path, ``-dest`` option is indicate the path where you want to put the gif, ``-n`` option is your gif file name.
+
+
 Test
-----------
+----
 Open your command and running the following code, you will see a list of helps from vcgif.
 
 .. code-block:: bash
