@@ -12,7 +12,7 @@ Welcome to vcgif's documentation!
    :caption: User Documentation
 
    Get Started <getting_started>
-
+   Command Options <command_options>
 Indices and tables
 ==================
 
