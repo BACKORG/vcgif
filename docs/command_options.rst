@@ -20,7 +20,7 @@ Gif start time
 The option ``-st or --start-timestamp`` is mark the start time from the video. picture is not require 
 use this option.
 
-``default value is 0``
+**default value is 0**
 
 .. note:: vcgif -st 10
 
@@ -28,7 +28,7 @@ Gif duration time
 -----------------
 The option ``-gd or --gif-duration`` is the display time for your gif.
 
-``default value is 5``
+**default value is 5**
 
 .. note:: vcgif -gd 10
 
@@ -36,9 +36,38 @@ Frames per second
 -----------------
 The option ``-fps or --fps`` is for the frames per second of output gif.
 
-``default value is 15``
+**default value is 15**
 
 .. note:: vcgif -fps 20
+
+Gif quality
+-----------------
+The option ``-q or --quality`` is indicate your gif quality.
+
+**default value is ``low``, you can use ``high`` to generate high quality gif**
+
+.. note:: vcgif -q high
+
+
+Gif file destination
+---------------------
+The option ``-dest or --destination`` is indicate your output file path.
+
+**default value is ``.``**
+
+.. note:: vcgif -dest /var/www/gif
+
+Gif file name
+---------------------
+The option ``-n or --name`` is your gif file name.
+
+**default value is uuid random string** *(do not need add file extension at the end)* 
+
+.. note:: vcgif -n my_gif
+
+
+
+
 
 
 
