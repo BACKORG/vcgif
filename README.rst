@@ -8,11 +8,11 @@ Welcome to vcgif
 Purpose
 ============
 
-Generate gif from video or picture
+Generate gif file from video or picture.
 
 
 Requirements
 ============
 
 * Python 3.*
-* pip3
+* Pip3
