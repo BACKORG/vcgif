@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os
+import vcgif.ZVideo
 
 class Converter(object):
     """
