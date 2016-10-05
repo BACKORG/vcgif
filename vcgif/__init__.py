@@ -2,8 +2,6 @@
 
 import os
 
-from vcgif.ZVideo import ZVideo
-
 class Converter(object):
     """
     Converter class, encapsulates formats and codecs.
