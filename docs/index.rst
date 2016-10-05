@@ -13,6 +13,7 @@ Welcome to vcgif's documentation!
 
    Get Started <getting_started>
    Command Options <command_options>
+   Api Reference <api_ref>
 Indices and tables
 ==================
 
