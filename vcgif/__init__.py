@@ -2,6 +2,7 @@
 
 import os
 
+from vcgif.ZVideo import ZVideo
 
 class Converter(object):
     """
