@@ -2,8 +2,8 @@ Welcome to vcgif
 ========================
 
 .. image:: https://readthedocs.org/projects/vcgif/badge/?version=latest
-:target: http://vcgif.readthedocs.io/en/latest/?badge=latest
-:alt: Documentation Status
+  :target: http://vcgif.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
 
 Purpose
 ============
