@@ -16,6 +16,10 @@ import os
 from vcgif.GifAbstract import GifAbstract
 
 class ZVideo(GifAbstract):
+    """
+        Video class
+    """
+    
     def __init__(self, **kwargs):
         super(ZVideo, self).__init__()
 
