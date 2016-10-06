@@ -4,6 +4,6 @@ API Reference
 Converter high-level API
 ------------------------
 
-.. automodule:: vcgif
+.. automodule:: vcgif.ZVideo.ZVideo
     :members:
     
