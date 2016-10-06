@@ -15,6 +15,18 @@ import os
 
 from vcgif.GifAbstract import GifAbstract
 
+class ccc1(object):
+    """
+    Converter class, encapsulates formats and codecs.
+    >>> c = Converter()
+    """
+
+    def __init__(self, ffmpeg_path=None, ffprobe_path=None):
+        """
+        Initialize a new Converter object.
+        """
+        pass
+
 class ZVideo(GifAbstract):
     """
         Video class
