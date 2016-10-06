@@ -7,7 +7,7 @@ Converter high-level  1
 .. automodule:: vcgif
     :members:
 
-Converter g111
+Converter ge11
 --------------
 
 .. automodule:: ccc1
