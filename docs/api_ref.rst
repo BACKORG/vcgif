@@ -1,7 +1,7 @@
 API Reference
 =============
 
-Converter high-level  1
+Converter higel  1
 -----------------------
 
 .. automodule:: vcgif

@@ -1,5 +1,3 @@
-from vcgif.ZVideo import Conv
-
 class Converter(object):
     """
     Converter class, encapsulates formats and codecs.

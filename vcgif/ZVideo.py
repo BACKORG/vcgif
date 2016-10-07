@@ -1,13 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-This class used for operate video
-
-Author: Zhe Xiao
-Contact: zhexiao27@gmail.com
-    
-Github: https://github.com/zhexiao/vcgif
-"""
-
 import subprocess
 import re
 import uuid
@@ -15,22 +6,9 @@ import os
 
 from vcgif.GifAbstract import GifAbstract
 
-class Conv(object):
-    """
-    Converter class, encapsulates formats and codecs.
-    >>> c = Converter()1
-    """
-
-    def __init__(self, ffmpeg_path=None, ffprobe_path=None):
-        """
-        Initialize a new Converter object.
-        """
-        pass
-    
-
 class ZVideo(GifAbstract):
     """
-        Video class
+        This class used for operate video
     """
     
     def __init__(self, **kwargs):
