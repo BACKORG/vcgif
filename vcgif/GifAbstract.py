@@ -100,7 +100,7 @@ class GifAbstract(metaclass=ABCMeta):
 
     @abstractmethod
     def generate_gif(self):
-        """Abstract class for generate gif method
+        """Abstract method for generate gif 
         
         All class should implement this method, even using `pass`. 
         
