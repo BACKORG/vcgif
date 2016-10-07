@@ -7,9 +7,9 @@ Converter high-level  1
 .. automodule:: vcgif
     :members:
 
-Converter ge11
+Converter ge1
 --------------
 
-.. automodule:: ccc1
+.. automodule:: vcgif.ZVideo.Conv
     :members:
 
