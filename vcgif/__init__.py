@@ -1,4 +1,4 @@
-import vcgif.ZVideo.Conv
+from vcgif.ZVideo import Conv
 
 class Converter(object):
     """
