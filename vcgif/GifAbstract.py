@@ -8,23 +8,18 @@ class GifAbstract(metaclass=ABCMeta):
     This class is gif abstract class, all convert class(video or picture) should
     inherit from this class.
     
+    Args:
+        * video (string): video path.
+        * start_timestamp (int): set the start timestamp of the video.
+        * gif_duration (int): set the gif duration length.
+        * fps (int): set the gif file frame rate.
+        * quality (string:`high`, string:`low`): set the gif file quality.
+        * destination (string): set the gif file output path.
+        * gif_name (string): set the gif filename.
+        
     """
     
     def __init__(self):
-        """__init__ method
-
-        The __init__ method be called when you initialization the class.
-
-        Args:
-            video (string): video path.
-            start_timestamp (int): set the start timestamp of the video.
-            gif_duration (int): set the gif duration length.
-            fps (int): set the gif file frame rate.
-            quality (string:`high`, string:`low`): set the gif file quality.
-            destination (string): set the gif file output path.
-            gif_name (string): set the gif filename.
-        """
-        
         self._video = None
         self._start_timestamp = 0
         self._gif_duration = 5
