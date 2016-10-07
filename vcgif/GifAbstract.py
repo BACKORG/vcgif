@@ -33,7 +33,7 @@ class GifAbstract(metaclass=ABCMeta):
         """
         string: return video path.
         
-        :param val: video path
+        :param path: string
         """
         return self._video
 
@@ -47,7 +47,7 @@ class GifAbstract(metaclass=ABCMeta):
         """
         int: return start timestamp length.
         
-        :param val: timestamp length
+        :param time: integer
         """
         return self._start_timestamp
 
@@ -58,7 +58,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def gif_duration(self):
-        """int: return gif duration length."""
+        """
+        int: return gif duration length.
+        
+        :param length: integer
+        """
         return self._gif_duration
 
     @gif_duration.setter
@@ -68,7 +72,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def fps(self):
-        """int: return gif fps number."""
+        """
+        int: return gif fps number.
+        
+        :param number: integer
+        """
         return self._fps
 
     @fps.setter
@@ -78,7 +86,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def quality(self):
-        """string: return gif file quality."""
+        """
+        string: return gif file quality.
+        
+        :param quality: string
+        """
         return self._quality
 
     @quality.setter
@@ -88,7 +100,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def destination(self):
-        """string: return gif output file path."""
+        """
+        string: return gif output file path.
+        
+        :param path: string
+        """
         return self._destination
 
     @destination.setter
@@ -98,7 +114,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def name(self):
-        """string: return gif output filename."""
+        """
+        string: return gif output filename.
+        
+        :param name: string
+        """
         return self._gif_name
 
     @name.setter
