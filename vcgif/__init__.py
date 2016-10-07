@@ -1,3 +1,5 @@
+import vcgif.ZVideo.Conv
+
 class Converter(object):
     """
     Converter class, encapsulates formats and codecs.
