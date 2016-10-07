@@ -9,7 +9,6 @@ class GifAbstract(metaclass=ABCMeta):
     inherit from this class.
     
     Args:
-        :param video: (`string`): video path.
         * ``video`` (`string`): video path.
         * ``start_timestamp`` (`int`): set the start timestamp of the video.
         * ``gif_duration`` (`int`): set the gif duration length.
@@ -36,7 +35,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @video.setter
     def video(self, val):
-        """void: set video path."""
+        """
+        void: set video path.
+        
+        :param val: video path
+        """
         self._video = val
 
     @property
