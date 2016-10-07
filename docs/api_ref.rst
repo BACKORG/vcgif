@@ -11,6 +11,6 @@ Converter high-level  1
 Converter high-level  2
 -----------------------
 
-.. automodule:: vcgif.Conv
+.. automodule:: vcgif.ZVideo
     :members:
 
