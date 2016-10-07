@@ -13,7 +13,7 @@ class GifAbstract(metaclass=ABCMeta):
         * start_timestamp (int): set the start timestamp of the video.
         * gif_duration (int): set the gif duration length.
         * fps (int): set the gif file frame rate.
-        * quality (string:`high`, string:`low`): set the gif file quality.
+        * quality (``string:high``, ``string:low``): set the gif file quality.
         * destination (string): set the gif file output path.
         * gif_name (string): set the gif filename.
         
