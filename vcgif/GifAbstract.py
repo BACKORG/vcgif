@@ -30,30 +30,30 @@ class GifAbstract(metaclass=ABCMeta):
 
     @property
     def video(self):
-        """string: return video path."""
+        """
+        string: return video path.
+        
+        :param val: video path
+        """
         return self._video
 
     @video.setter
     def video(self, val):
-        """
-        void: set video path.
-        
-        :param val: video path
-        """
+        """void: set video path."""
         self._video = val
 
     @property
     def start_timestamp(self):
-        """int: return start timestamp length."""
+        """
+        int: return start timestamp length.
+        
+        :param val: timestamp length
+        """
         return self._start_timestamp
 
     @start_timestamp.setter
     def start_timestamp(self, val):
-        """
-        void: set start timestamp length.
-        
-        :param val: timestamp length
-        """
+        """void: set start timestamp length."""
         self._start_timestamp = val
 
     @property
