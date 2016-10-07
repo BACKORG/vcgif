@@ -9,6 +9,7 @@ class GifAbstract(metaclass=ABCMeta):
     inherit from this class.
     
     Args:
+        :param video: (`string`): video path.
         * ``video`` (`string`): video path.
         * ``start_timestamp`` (`int`): set the start timestamp of the video.
         * ``gif_duration`` (`int`): set the gif duration length.
