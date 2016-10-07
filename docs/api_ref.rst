@@ -1,9 +1,9 @@
 API Reference
 =============
 
-Video class
------------------------
+Gif Abstract Class
+------------------
 
-.. automodule:: vcgif.ZVideo
+.. automodule:: vcgif.GifAbstract
     :members:
 
