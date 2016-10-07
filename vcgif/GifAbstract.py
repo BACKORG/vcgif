@@ -49,7 +49,11 @@ class GifAbstract(metaclass=ABCMeta):
 
     @start_timestamp.setter
     def start_timestamp(self, val):
-        """void: set start timestamp length."""
+        """
+        void: set start timestamp length.
+        
+        :param val: timestamp length
+        """
         self._start_timestamp = val
 
     @property
