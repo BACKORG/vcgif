@@ -16,3 +16,4 @@ Requirements
 
 * Python 3.*
 * Pip3
+* FFmpeg
